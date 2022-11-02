@@ -1,7 +1,8 @@
 :root {
   --primary: #118ea7;
+  --secondary: #5bc2d6;
   --dark: #042025;
-  --light: #d9f7fc;
+  --light: #eefcff;
   --alert: #e63946;
   --success: #76ab21;
 }
@@ -13,3 +14,61 @@
   font-family: "Montserrat", sans-serif;
   background-color: var(--light);
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.app-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  padding: 5rem;
+  color: var(--primary);
+  text-shadow: 2px 2px 3px var(--secondary);
+}
+
+.login-section {
+  background-color: inherit;
+  border: 1px solid var(--secondary);
+  padding: 2rem;
+}
+
+.login-section h2 {
+  font-size: 30px;
+  padding-bottom: 2rem;
+  color: var(--primary);
+}
+
+.login-section form input {
+  font-size: 18px;
+  color: var(--dark);
+  padding: 7px 10px;
+  border: 0;
+  border: 1px solid var(--secondary);
+  outline: none;
+}
+
+.login-section .btn-primary {
+  background-color: var(--primary);
+  color: var(--light);
+  border: 1px solid var(--primary);
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.linebreak {
+  flex-basis: 100%;
+}
+
+::placeholder { color: var(--primary); opacity: 1; }
+:-ms-input-placeholder { color: var(--primary); }
+::-ms-input-placeholder { color: var(--primary); }
