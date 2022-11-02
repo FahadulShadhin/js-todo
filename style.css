@@ -1,6 +1,15 @@
+:root {
+    --primary: #118EA7;
+    --dark: #042025;
+    --light: #d9f7fc;
+    --alert: #E63946;
+    --success: #76AB21;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
 }
