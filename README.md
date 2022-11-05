@@ -1,1 +1,1 @@
-# To-do app with multiple user using JavaScript web storage
+# To-do app with multiple users using JavaScript web storage
