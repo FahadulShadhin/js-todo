@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>To-do app</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Login</title>
   </head>
   <body>
     <main class="container">
@@ -19,7 +19,7 @@
       <section class="linebreak"></section>
       <section class="login-section">
         <h2>Login</h2>
-        <form action="list.html" onsubmit="login()">
+        <form action="./list.html" id="login-form">
         <input 
           type="text" 
           name="name"
@@ -27,10 +27,10 @@
           autocomplete="off" 
           placeholder="Your name here..."
         />
-        <button class="btn-primary" type="submit">Login</button>
+        <input type="submit" value="Login" />
       </form>
       </section>
     </main>
-    <script src="login.js"></script>
+    <script type="module" defer src="js/login.js"></script>
   </body>
 </html>
