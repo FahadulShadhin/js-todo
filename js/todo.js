@@ -39,7 +39,7 @@ const showTodo = (key) => {
                 </p>
                 <textarea class="todo-description" type="text" readonly/> ${i[1]} </textarea>
                 <span class="options">
-                  <i data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit edit"></i>
+                  <button type="submit" class="edit">Edit</button>
                   <i class="fas fa-trash-alt delete"> </i>
                 </span>
               </div>
@@ -51,12 +51,12 @@ const showTodo = (key) => {
 const editTodo = (key) => {
     const titles = document.getElementsByClassName('todo-title');
     const descriptions = document.getElementsByClassName('todo-description');
-    const edit_btn = document.getElementsByClassName('edit');
+    const edit_btns = document.getElementsByClassName('edit');
     const obj = parseFromLocalStorage(key);
     const todo_arr = obj.todolist;
 
-    for(let i=0; i<edit_btn.length; i++) {
-        edit_btn[i].addEventListener('click', (e) => {
+    for(let i=0; i<edit_btns.length; i++) {
+        edit_btns[i].addEventListener('click', (e) => {
             e.preventDefault();
             if(titles[i].hasAttribute('readonly')) {
                 titles[i].removeAttribute('readonly');
@@ -70,6 +70,12 @@ const editTodo = (key) => {
                 descriptions[i].setAttribute('readonly', 'readonly');
                 todo_arr[i][1] = descriptions[i].value;
             }
+
+            if(edit_btns[i].classList.contains('edit')) edit_btns[i].classList.toggle('save');
+
+            if(edit_btns[i].classList.contains('save')) edit_btns[i].innerHTML = 'Save';
+            else edit_btns[i].innerHTML = 'Edit';
+
             const jsonData = JSON.stringify(obj);
             localStorage.setItem(key, jsonData);
         })

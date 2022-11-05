@@ -170,6 +170,22 @@
   cursor: pointer; 
 }
 
+.todo-list .options .edit {
+  color: var(--primary);
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.todo-list .options .save {
+  color: var(--success);
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .no-todo {
   font-size: 30px;
   color: var(--alert);
